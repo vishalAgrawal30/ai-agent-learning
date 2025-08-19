@@ -977,6 +977,7 @@ dependencies = [
     { name = "langgraph" },
     { name = "notebook" },
     { name = "python-dotenv" },
+    { name = "requests" },
 ]
 
 [package.metadata]
@@ -986,6 +987,7 @@ requires-dist = [
     { name = "langgraph", specifier = ">=0.6.5" },
     { name = "notebook", specifier = ">=7.4.5" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
+    { name = "requests", specifier = ">=2.32.4" },
 ]
 
 [[package]]
