@@ -1,2 +1,2 @@
-from .stock_price_Agent import get_Stock_price
-from .leave_balance import check_leave_balance
+from .leave_balance_agent import check_leave_balance
+from .stock_agent import get_Stock_price

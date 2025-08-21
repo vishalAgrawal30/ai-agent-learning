@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Header
 from pydantic import BaseModel
 from langchain_core.messages import HumanMessage
-from leave_balance import graph
+from chatbot_graph import graph
 
 app = FastAPI(title="Stock & Leave Chatbot API")
 

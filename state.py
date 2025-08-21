@@ -1,5 +1,7 @@
-from typing import TypedDict, List
-from langchain_core.messages import HumanMessage
+from typing_extensions import TypedDict
+from typing import Annotated
+from langgraph.graph.message import add_messages
 
+# --- State ---
 class State(TypedDict):
-    messages: List[HumanMessage]
+    messages: Annotated[list, add_messages]
