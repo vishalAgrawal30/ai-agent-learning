@@ -21,6 +21,7 @@ def leave_balance(x_user_context: str) -> dict:
     token_prefix = auth_data.get("tokenPrefix", "")
     employee_id = auth_data.get("employeeId")
     login_id = auth_data.get("id")
+    username =  auth_data.get("userName")
 
     if not token or not login_id:
         return {"error": "❌ Missing token or loginId in header JSON"}
@@ -34,7 +35,7 @@ def leave_balance(x_user_context: str) -> dict:
         "authorization": f"{token_prefix}{token}",
         "content-type": "application/json",
         "referer": "https://uat.fuzionhr.com/",
-        "x-device-id": "c9c9d16a-e255-48c1-ba27-287f556c83f9",
+        "x-device-id": "a997ca51-52ef-4b96-9b3c-5ff29c4b79f5",
         "x-fcm-token": "null"
     }
 
@@ -48,6 +49,7 @@ def leave_balance(x_user_context: str) -> dict:
     try:
         response = requests.post(API_URL, headers=headers, json=payload, timeout=10)
         if response.status_code == 200:
+            print(f"UserName:{username}")
             return response.json()
         else:
             return {"error": f"Failed with {response.status_code}", "details": response.text}

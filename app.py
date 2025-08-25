@@ -25,7 +25,6 @@ def chat_endpoint(
 
     if x_user_context:
         leave_balance_response = leave_balance.invoke(x_user_context)
-        print(leave_balance_response)
     # Prepare chatbot state
     state_messages = [HumanMessage(content=request.text)]
 
